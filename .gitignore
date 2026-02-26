@@ -1,0 +1,11 @@
+.idea/
+.mvn/
+
+src/test
+
+.gitattributes
+
+HELP.md
+
+mvnw
+mvnw.cmd
