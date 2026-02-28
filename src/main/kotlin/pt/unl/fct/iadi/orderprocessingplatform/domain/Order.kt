@@ -13,6 +13,4 @@ data class Order(
         val quantity: Int,
         val price: Double
     )
-
-    //val totalValue: Double = items.sumOf { it.price * it.quantity }
 }

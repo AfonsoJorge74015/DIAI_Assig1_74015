@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component
 import pt.unl.fct.iadi.orderprocessingplatform.domain.Order
 
 @Component
-@ConditionalOnProperty(name=["pricing.promo.enabled"], havingValue = "false")
+@ConditionalOnProperty(name=["pricing.promo.enabled"], havingValue = "false", matchIfMissing = true)
 class BasicPriceCalculator : PriceCalculator {
     override fun calculateTotalPrice(order: Order): Double {
         return order.items.sumOf { it.price * it.quantity }
